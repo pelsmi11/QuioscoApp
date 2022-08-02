@@ -9,7 +9,7 @@ export default function Home() {
   const { categoriaActual } = useQuiosco();
   return (
     <div>
-      <Layout pagina={`Menú ${categoriaActual?.nombre}`}>
+      <Layout pagina={`Menú ${categoriaActual?.nombre || ""}`}>
         <div className="flex gap-10 items-center justify-between">
           <div>
             <h1 className="text-4xl font-bold ">{categoriaActual?.nombre}</h1>
