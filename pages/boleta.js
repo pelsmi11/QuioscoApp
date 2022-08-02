@@ -19,7 +19,7 @@ export default function Boleta() {
     content: () => componentRef.current,
     documentTitle: `Orden_${id}`,
     onAfterPrint: () => toast.success("🚀 PDF Generado"),
-    onPrintError: () => toast.error("💥 Error En PDF"),
+    onPrintError: () => toast.error("💥 Error PDF"),
   });
 
   const handleReturn = () => {
