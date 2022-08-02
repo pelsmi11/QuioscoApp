@@ -117,7 +117,7 @@ const QuioscoProvider = ({ children }) => {
       //toast
       toast.success("Pedido Realizado Correctamente");
       setTimeout(() => {
-        router.push("/");
+        router.push("/boleta");
       }, 3000);
     } catch (error) {
       console.error(error);
@@ -150,6 +150,7 @@ const QuioscoProvider = ({ children }) => {
         handleEditarCantidades,
         handleEliminarProducto,
         setNombre,
+        setOrdenGenerado,
         colocarOrden,
       }}
     >

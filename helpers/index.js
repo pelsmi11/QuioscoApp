@@ -5,4 +5,19 @@ const formatearDinero = (cantidad) => {
   });
 };
 
-export { formatearDinero };
+const formatearFecha = (fecha) => {
+  const fechaNueva = new Date(fecha);
+
+  const opciones = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+
+  return fechaNueva.toLocaleDateString("es-ES", opciones);
+};
+
+export { formatearDinero, formatearFecha };
