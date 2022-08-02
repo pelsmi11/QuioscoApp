@@ -1,6 +1,5 @@
 import React from "react";
 import useQuiosco from "../../hooks/useQuiosco";
-import { boletaObjeto } from "../../Data/Boleta";
 import { formatearFecha, formatearDinero } from "../../helpers";
 
 const BoletaPdf = () => {
@@ -12,7 +11,9 @@ const BoletaPdf = () => {
         <div className="flex items-center flex-col border border-gray-900">
           <p className="text-2xl font-black">Numero de Orden: {id}</p>
           <p className="text-xl font-black">Cliente: {nombre}</p>
-          <p className="text-xl font-black">Total: {formatearDinero(total)}</p>
+          <p className="text-xl font-black">
+            Total: {formatearDinero(total || 0)}
+          </p>
           <p className="text-xl font-black" suppressHydrationWarning>
             Fecha: {formatearFecha(fecha)}
           </p>
