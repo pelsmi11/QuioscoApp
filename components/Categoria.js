@@ -9,7 +9,7 @@ const Categoria = ({ categoria }) => {
     <div
       className={`${
         categoriaActual?.id === id ? "bg-amber-400" : ""
-      }  border  lg:hover:bg-amber-400 `}
+      }  border  md:hover:bg-amber-400 `}
     >
       <button
         type="button"
