@@ -7,16 +7,18 @@ const ResumenProducto = ({ producto }) => {
   const { handleEditarCantidades, handleEliminarProducto } = useQuiosco();
 
   return (
-    <div className="shadow p-5 mb-3 flex gap-10 items-center">
+    (<div className="shadow p-5 mb-3 flex gap-10 items-center">
       <div className="md:w-1/6">
         <Image
           width={300}
           height={400}
           alt={`Imagen producto ${producto.nombre}`}
           src={`/assets/img/${producto.imagen}.jpg`}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
-
       <div className="md:w-4/6">
         <p className="text-3xl front-bold">{producto.nombre}</p>
         <p className="text-xl front-bold mt-2">Cantidad: {producto.cantidad}</p>
@@ -27,7 +29,6 @@ const ResumenProducto = ({ producto }) => {
           Subtotal: {formatearDinero(producto.precio * producto.cantidad)}
         </p>
       </div>
-
       <div>
         <button
           className="bg-sky-700 flex gap-2 px-5 py-2 text-white text-center rounded-md font-bold uppercase shadow-md w-full "
@@ -64,7 +65,7 @@ const ResumenProducto = ({ producto }) => {
           Eliminar
         </button>
       </div>
-    </div>
+    </div>)
   );
 };
 

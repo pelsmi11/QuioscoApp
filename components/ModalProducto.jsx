@@ -22,14 +22,17 @@ const ModalProducto = () => {
   }, [producto, pedido]);
 
   return (
-    <div className="md:flex gap-10">
+    (<div className="md:flex gap-10">
       <div className="md:w-1/3 ">
         <Image
           width={300}
           height={400}
           alt={`imagen producto ${producto.nombre}`}
           src={`/assets/img/${producto.imagen}.jpg`}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className="md:w-2/3 ">
         <div className="flex justify-end">
@@ -120,7 +123,7 @@ const ModalProducto = () => {
           {edicion ? "Guardar Cambios" : "Añadir al Pedido"}
         </button>
       </div>
-    </div>
+    </div>)
   );
 };
 

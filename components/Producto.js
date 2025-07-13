@@ -6,13 +6,16 @@ const Producto = ({ producto }) => {
   const { handleSetProducto, handleChangeModal } = useQuiosco();
   const { nombre, imagen, precio } = producto;
   return (
-    <div className="border p-3">
+    (<div className="border p-3">
       <Image
         src={`/assets/img/${imagen}.jpg`}
         alt={`Imagen Platillo ${nombre}`}
         width={400}
         height={500}
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div className="p-5">
         <h3 className="text-2xl font-bold">{nombre}</h3>
         <p className="mt-5 font-black text-4xl text-amber-500">
@@ -30,7 +33,7 @@ const Producto = ({ producto }) => {
           Agregar
         </button>
       </div>
-    </div>
+    </div>)
   );
 };
 

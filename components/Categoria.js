@@ -6,7 +6,7 @@ const Categoria = ({ categoria }) => {
   const { categoriaActual, handleClickCategoria } = useQuiosco();
   const { nombre, icono, id } = categoria;
   return (
-    <div
+    (<div
       className={`${
         categoriaActual?.id === id ? "bg-amber-400" : ""
       }  border  md:hover:bg-amber-400 `}
@@ -22,11 +22,14 @@ const Categoria = ({ categoria }) => {
             height={70}
             src={`/assets/img/icono_${icono}.svg`}
             alt="Imagen Icono"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           {nombre}
         </div>
       </button>
-    </div>
+    </div>)
   );
 };
 
